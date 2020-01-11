@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <title>Weather App</title>
+    <style>
+        .nav{
+            background-color: green;
+            height: 50px;
+            width: 100% auto;
+            border-radius: 10px 10px 10px 10px;
+        }
+        .appname{
+            color:white;
+            position: relative;
+            top: 10px;
+        }
+        body{
+            background-color:lavender;
+        }
+        .form-container{
+            position: fixed;
+            top: 120px;
+            left: 600px;   
+        }
+        .button{
+            background-color: blue;
+            color: white;
+            height: 30px;
+        }
+        .updatecontainer{
+            position: fixed;
+            top: 200px;
+            left: 670px;
+        }
+        #menu-outer {
+            height: 150px;
+           
+        }
+
+        .table {
+            display: table;   
+            margin: 5px auto;
+            
+        }
+
+        ul#horizontal-list {
+            min-width: 600px;
+            list-style: none;
+            padding-top: 20px;
+            position: relative;
+            left: -130px;
+        }
+        ul#horizontal-list li {
+            display: inline;
+            font-size: 25px;
+            margin: 5px;
+        }
+        
+    </style>
+    <head>
+          
+    </head>
+    <body>
+        <div class="nav">
+            <h3 class="appname">WeatherApp</h3>
+        </div>
+        <div class="form-container">
+            <form method="POST" action=".">
+            <input name="addcity" type="text" class="form" size="25">
+            <input type="submit" value="Add" class="button"/>
+            </form>
+        </div>
+
+       <div class="updatecontainer" class="container">
+            <h4>Weather Updates</h4>
+            <div id="menu-outer>
+                <div class="table">
+                    <ul id="horizontal-list">
+                    <li><a href="#"><img src="" alt="icon" /></a></li>
+                    <li>City</li>
+                    <li>Temp</li>
+                    <li>Description</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <table class="table-stripped">
+                <tr>
+                    <th>Icon</th>
+                    <th>City</th>
+                    <th>Temp</th>
+                </tr>
+                <tr>
+                    <td>Icon</td>
+                    <td>City</td>
+                    <td>Temp</td>
+                </tr>
+                <tr>
+                    <td>Icon</td>
+                    <td>City</td>
+                    <td>Temp</td>
+                </tr>
+            </table> -->
+       </div>
+    </body>
+</html>
