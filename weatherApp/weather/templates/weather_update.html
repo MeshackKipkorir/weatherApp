@@ -15,6 +15,7 @@
         }
         body{
             background-color:lavender;
+            background-image:url('bg2.jpeg')
         }
         .form-container{
             position: fixed;
@@ -64,22 +65,25 @@
             <h3 class="appname">WeatherApp</h3>
         </div>
         <div class="form-container">
-            <form method="POST" action=".">
-            <input name="addcity" type="text" class="form" size="25">
+            <form method="POST" action=".">{% csrf_token %}
+             {{myform.name}}
             <input type="submit" value="Add" class="button"/>
             </form>
         </div>
 
        <div class="updatecontainer" class="container">
             <h4>Weather Updates</h4>
+            
             <div id="menu-outer>
                 <div class="table">
+                    {% for city_weather in weather_data %}
                     <ul id="horizontal-list">
-                    <li><a href="#"><img src="" alt="icon" /></a></li>
+                    <li><a href="#"><img src="https://openweathermap.org/img/w/{{city_weather.icon}}.png" alt="icon" /></a></li>
                     <li>{{city_weather.city}}</li>
-                    <li>Temp</li>
-                    <li>Description</li>
+                    <li>{{city_weather.temparature}}</li>
+                    <li>{{city_weather.description}}</li>
                     </ul>
+                    {% endfor %}
                 </div>
             </div>
             <!-- <table class="table-stripped">
