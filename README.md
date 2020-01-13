@@ -1,3 +1,4 @@
+https://travis-ci.org/MeshackKipkorir/weatherApp.svg?branch=master
 PROJECT TITLE:
 weatherApp
 
